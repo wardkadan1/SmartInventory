@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.firstapp.homework2.Loginpage.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_product"
+            app:destination="@id/product" />
+        <action
+            android:id="@+id/action_login_to_reg"
+            app:destination="@id/reg" />
+    </fragment>
+    <fragment
+        android:id="@+id/product"
+        android:name="com.firstapp.homework2.Product.Product"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/reg"
+        android:name="com.firstapp.homework2.reg.reg"
+        android:label="fragment_reg"
+        tools:layout="@layout/fragment_reg" >
+        <action
+            android:id="@+id/action_reg_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>
