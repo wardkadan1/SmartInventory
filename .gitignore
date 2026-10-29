@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Keep project-specific Firebase configuration out of Git
+**/google-services.json
